@@ -1,0 +1,49 @@
+{
+  "name": "@graph/networking",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "clean": "rm -rf dist",
+    "prebuild": "pnpm run clean",
+    "prebuild:debug": "pnpm run clean",
+    "build": "tsc",
+    "build:debug": "tsc -p tsconfig.debug.json",
+    "test:lib": "pnpm run build:debug && pnpm run test",
+    "keygen": "chmod +x ./scripts/keygen.sh && ./scripts/keygen.sh",
+    "pretest": "pnpm run keygen",
+    "test": "ava"
+  },
+  "dependencies": {
+    "@graph/utils": "workspace:",
+    "socket.io-client": "catalog:",
+    "socket.io-cbor-x-parser": "catalog:"
+  },
+  "devDependencies": {
+    "@ava/typescript": "catalog:",
+    "@graph/tsconfig": "workspace:",
+    "ava": "catalog:",
+    "bufferutil": "catalog:",
+    "get-port": "catalog:",
+    "socket.io": "catalog:",
+    "typescript": "catalog:",
+    "utf-8-validate": "catalog:"
+  },
+  "ava": {
+    "files": [
+      "src/**/*.spec.ts"
+    ],
+    "typescript": {
+      "rewritePaths": {
+        "src/": "dist/"
+      },
+      "extensions": [
+        "ts"
+      ],
+      "compile": false
+    }
+  },
+  "license": "See LICENSE.md"
+}

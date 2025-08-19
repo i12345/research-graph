@@ -1,0 +1,23 @@
+{
+    "$schema": "https://turbo.build/schema.v2.json",
+    "tasks": {
+        "clean": {
+            "dependsOn": ["^clean"]
+        },
+        "build": {
+            "dependsOn": ["^build"],
+            "outputs": ["dist/**"]
+        },
+        "build:debug": {
+            "dependsOn": ["^build:debug"],
+            "outputs": ["dist/**"]
+        },
+        "@graph/tsconfig#build": {
+            "dependsOn": [],
+            "outputs": ["*"]
+        },
+        "test": {
+            "dependsOn": ["build:debug", "^test"]
+        }
+    }
+}

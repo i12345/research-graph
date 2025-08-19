@@ -1,0 +1,28 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "docs",
+		},
+		{
+			"path": "apps/site"
+		},
+		{
+			"path": "apps/desktop"
+		},
+		{
+			"path": "packages/tsconfig"
+		},
+		{
+			"path": "packages/utils"
+		},
+		{
+			"path": "packages/networking"
+		},
+		{
+			"path": "packages/networking-server"
+		},
+	],
+}

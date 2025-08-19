@@ -1,0 +1,18 @@
+packages:
+  - packages/*
+  - modules/*
+  - apps/*
+
+catalog:
+  '@ava/typescript': latest
+  '@fails-components/webtransport': latest
+  '@fails-components/webtransport-transport-http3-quiche': latest
+  '@types/node': latest
+  ava: latest
+  bufferutil: latest
+  get-port: latest
+  socket.io: latest
+  socket.io-cbor-x-parser: latest
+  socket.io-client: latest
+  typescript: ^5.8.3
+  utf-8-validate: latest

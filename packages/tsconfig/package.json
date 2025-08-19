@@ -1,0 +1,18 @@
+{
+  "name": "@graph/tsconfig",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "build": "",
+    "test": ""
+  },
+  "devDependencies": {
+    "@tsconfig/node24": "^24.0.1",
+    "@tsconfig/strictest": "^2.0.5",
+    "typescript": "catalog:"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "See LICENSE.md"
+}
